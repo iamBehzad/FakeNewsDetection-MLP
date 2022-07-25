@@ -21,7 +21,7 @@ DT = DT[pd.notnull(DT['text'])]
 ############  Split Data ##################
 X_train, X_test, Y_train, Y_test = train_test_split(DT['text'], DT['label'], test_size=0.33, random_state=42)
 
-############  Feature Extraction (TD-IDF) ##################
+############  Feature Extraction (TF-IDF) ##################
 count_vect = CountVectorizer()
 X_train_counts = count_vect.fit_transform(X_train)
 tfidf_transformer = TfidfTransformer()
